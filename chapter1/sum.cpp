@@ -26,11 +26,10 @@ class sum
 
 int main()
 {
-	system("cls");
-   	sum obj;
-   	obj.intput();
-   	obj.print();
-	getchar();
-	return 0;
+   sum obj;
+   obj.intput();
+   obj.print();
+	
+   return 0;
 }
 
