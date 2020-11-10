@@ -1,3 +1,10 @@
+/*
+	Simple Queues Program
+	Data Structures using C++ - Examples
+	Version:1.0
+	Date:	2020-10-20
+	Author:	Kamran Qadir (kamran.qadir@bzu.edu.pk)
+*/
 #include<iostream>
 #include<conio.h>
 using namespace std;
