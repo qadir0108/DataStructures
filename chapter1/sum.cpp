@@ -1,3 +1,10 @@
+/*
+	Program to Sum two numbers
+	Data Structures using C++ - Examples
+	v:		1.0
+	Date:	2020-09-24
+	Author:	Kamran Qadir (kamran.qadir@bzu.edu.pk)
+*/
 #include <iostream>
 #include <conio.h>
 using namespace std;
