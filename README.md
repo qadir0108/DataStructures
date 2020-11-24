@@ -22,3 +22,7 @@ List of Programs
 - Simple Queues
 - Circular Queue
 - Double Ended Queue
+
+**Chapter #6: Searching Sorting**
+- Sequential Search
+- Binary Search
