@@ -26,3 +26,5 @@ List of Programs
 **Chapter #6: Searching Sorting**
 - Sequential Search
 - Binary Search
+- Bubble Sort
+- Selection Sort
