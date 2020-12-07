@@ -47,6 +47,7 @@ class SelectionSort
 		            // Just swap 
 					// current item arr[i] with arr[loc] 
 					// min is at location loc
+					// arr[i] is to-be location of min number
 	                temp = arr[loc];
 	                arr[loc] = arr[i];
 	                arr[i] = temp;
