@@ -35,3 +35,7 @@ List of Programs
 -- Insert At End
 -- Insert At Start
 -- Insert At Specified Location
+- Linked List Delete
+-- Delete Specified Item
+-- Delete From End
+-- Delete From Start
