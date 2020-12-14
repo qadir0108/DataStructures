@@ -32,10 +32,10 @@ List of Programs
 **Chapter #7: Linked List**
 - Linked List Append
 - Linked List Insert
--- Insert At End
--- Insert At Start
--- Insert At Specified Location
+  - Insert At End
+  - Insert At Start
+  - Insert At Specified Location
 - Linked List Delete
--- Delete Specified Item
--- Delete From End
--- Delete From Start
+  - Delete Specified Item
+  - Delete From End
+  - Delete From Start
