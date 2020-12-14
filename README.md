@@ -31,3 +31,7 @@ List of Programs
 
 **Chapter #7: Linked List**
 - Linked List Append
+- Linked List Insert
+-- Insert At End
+-- Insert At Start
+-- Insert At Specified Location
