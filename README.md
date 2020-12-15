@@ -39,3 +39,4 @@ List of Programs
   - Delete Specified Item
   - Delete From End
   - Delete From Start
+- Two Way Linked List
