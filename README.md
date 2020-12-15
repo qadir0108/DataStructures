@@ -40,3 +40,7 @@ List of Programs
   - Delete From End
   - Delete From Start
 - Two Way Linked List
+
+**Chapter #8: Trees**
+- Tree Create & Search
+- Traverse PreOrder, InOrder, PostOrder

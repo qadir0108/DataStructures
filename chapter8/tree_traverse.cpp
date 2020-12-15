@@ -1,5 +1,5 @@
 /*
-	Tree Data Structure
+	Tree Traverse in PreOrder, InOrder, PostOrder
 	Data Structures using C++ - Examples
 	Version:1.0
 	Date:	2020-12-15
@@ -27,6 +27,54 @@ class Tree
 		Tree() 
 		{
 			root = NULL;
+		}
+		
+		// Member function to Traverse PreOrder
+		void preOrder()
+		{
+			pre(root);
+		}
+		
+		void pre(Node* node)
+		{
+			if(node != NULL)
+			{
+				cout << node -> data << "\t";
+				pre(node -> left);
+				pre(node -> right);
+			}
+		}
+		
+		// Member function to Traverse InOrder
+		void inOrder()
+		{
+			in(root);
+		}
+		
+		void in(Node* node)
+		{
+			if(node != NULL)
+			{
+				in(node -> left);
+				cout << node -> data << "\t";
+				in(node -> right);
+			}
+		}
+		
+		// Member function to Traverse PostOrder
+		void postOrder()
+		{
+			post(root);
+		}
+		
+		void post(Node* node)
+		{
+			if(node != NULL)
+			{
+				in(node -> left);
+				in(node -> right);
+				cout << node -> data << "\t";
+			}
 		}
 		
 		// Member function to create
@@ -84,38 +132,6 @@ class Tree
 				}
 			}
 		}
-		
-		// Member function to search
-		void search(int x)
-		{
-			if(root == NULL)
-			{
-				cout << "Tree is Empty";
-				return;
-			}
-			
-			current = root;
-			while(current != NULL)
-			{
-				if(current -> data == x)
-				{
-					cout << x << " Found!";
-					return;
-				}
-				if(x < current -> data)
-				{
-					current = current -> left;
-				}
-				else
-				{
-					current = current -> right;
-				}
-			}
-			
-			if(current == NULL)
-			cout << x << " Not Found";
-		}
-		
 };
 // Class Tree End
 
@@ -133,8 +149,10 @@ int main()
 	{
 		cout << endl;
 		cout << "1. Create new Tree" << endl;
-		cout << "2. Search Node" << endl;
-		cout << "3. Exit" << endl;
+		cout << "2. PreOrder Traversal" << endl;
+		cout << "3. InOrder Traversal" << endl;
+		cout << "4. PostOrder Traversal" << endl;
+		cout << "5. Exit" << endl;
 		cout << "Enter your choice / option : " << endl;
 		cin >> option;
 		
@@ -149,11 +167,18 @@ int main()
 				}
 				break;
 			case 2:
-				cout << "Enter value to Search: ";
-				cin >> value;
-				obj.search(value);
+				cout << endl << "******* PreOrder Traversal *******" << endl;
+				obj.preOrder();
 				break;
 			case 3:
+				cout << endl << "****** InOrder Traversal *******" << endl;
+				obj.inOrder();
+				break;
+			case 4:
+				cout << endl << "******* PostOrder Traversal *******" << endl;
+				obj.postOrder();
+				break;
+			case 5:
 				flag = 0;
 				break;	
 		}
