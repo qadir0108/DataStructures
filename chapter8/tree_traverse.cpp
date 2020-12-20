@@ -71,8 +71,8 @@ class Tree
 		{
 			if(node != NULL)
 			{
-				in(node -> left);
-				in(node -> right);
+				post(node -> left);
+				post(node -> right);
 				cout << node -> data << "\t";
 			}
 		}
