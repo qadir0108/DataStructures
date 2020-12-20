@@ -80,12 +80,15 @@ class Tree
 		// Member function to create
 		int create(int n)
 		{
+			// Create new node
+			temp = new Node;
+			temp -> left = NULL;
+			temp -> data = n;
+			temp -> right = NULL;
+				
 			if(root == NULL) 
 			{
-				root = new Node;
-				root -> left = NULL;
-				root -> data = n;
-				root -> right = NULL;
+				root = temp;
 			}
 			else
 			{
@@ -95,34 +98,23 @@ class Tree
 				current = root;
 				while(current != NULL)
 				{
-					if(current -> data == n) 
+					parent = current;
+					if(n == current -> data) 
 					{
 						cout << "Data already exists";
 						return -1;
 					}
 					if(n < current -> data)
 					{
-						parent = current;
 						current = current -> left;
 					}
 					else
 					{
-						parent = current;
 						current = current -> right;
 					}
 				}
 				
-				// Create & add new node under parent Node
-				temp = new Node;
-				temp -> left = NULL;
-				temp -> data = n;
-				temp -> right = NULL;
-				
-				if(parent == NULL)
-				{
-					parent = temp;	
-				}
-				else if(n < parent -> data)
+				if(n < parent -> data)
 				{
 					parent -> left = temp;
 				}
