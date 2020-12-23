@@ -81,7 +81,9 @@ class LinkedListDelete
 		void deleteStart()
 		{
 			cout << "\nNumber from Start DELETED: " << start -> data;
+			temp = start;
 			start = start -> link;
+			delete temp;
 		}
 		
 		// Member function to delete at End
@@ -100,6 +102,7 @@ class LinkedListDelete
 			// temp will be second last node
 			cout << "\nNumber from End DELETED: "<< current -> data;
 			temp -> link = NULL;
+			delete current;
 		}
 		
 		// Member function to print
