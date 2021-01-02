@@ -44,3 +44,9 @@ List of Programs
 **Chapter #8: Trees**
 - Tree Create & Search
 - Traverse PreOrder, InOrder, PostOrder
+
+**Chapter #9: Graphs**
+- Linked List from Library Example
+- Array of Linked List for Adjacency List
+- Breadth First Search (BFS)
+- Depth First Search (DFS)
