@@ -1,4 +1,4 @@
-# DataStructures
+# DataStructures from BS(IT) branch
  For students to understand data structures
 
 List of Programs
