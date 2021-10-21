@@ -96,54 +96,66 @@ int main()
 	return 0;
 }
 
-	// Member function to insert item from front side
-	void StudentQueue::insertFront(int n)
-	{
-		if(front == 0 && back == 9)
-		{
-			cout << "Double-Ended Queue is Full... Please Wait outside...";
-			return;
-		}
-		
-		if(front == -1 && back == -1)
-		{
-			back = front = 0;
-			q[front] = n;
-		} 
-		else if(front > 0)
-		{
-			front = front - 1;
-			q[front] = n;
-		}
-		else
-		{
-			cout << "Double-Ended Queue => No Space from FRONT Side";
-			return;
-		}
-	}
-	
 	// Member function to insert item from back side
 	void StudentQueue::insertBack(int n)
 	{
+		// When Q is FULL
 		if(front == 0 && back == 9)
 		{
 			cout << "Double-Ended Queue is Full... Please Wait outside...";
 			return;
 		}
-		
+
+		// When Q is EMPTY and this is first item to insert
 		if(front == -1 && back == -1)
 		{
 			back = front = 0;
 			q[back] = n;
 		} 
+		
+		// Normal Condition
 		else if(back < 9)
 		{
 			back = back + 1;
 			q[back] = n;
 		}
+		
+		// When back == 9
 		else
 		{
 			cout << "Double-Ended Queue => No Space from BACK Side";
+			return;
+		}
+	}
+	
+	// Member function to insert item from front side
+	void StudentQueue::insertFront(int n)
+	{
+		// When Q is FULL
+		if(front == 0 && back == 9)
+		{
+			cout << "Double-Ended Queue is Full... Please Wait outside...";
+			return;
+		}
+		
+		// When Q is EMPTY and this is first item to insert
+		if(front == -1 && back == -1)
+		{
+			back = front = 0;
+			q[front] = n;
+		}
+		
+		// Normal Condition
+		else if(front > 0)
+		{
+			front = front - 1;
+			q[front] = n;
+		}
+		
+		// When front == 0
+		else
+		{
+			cout << "Double-Ended Queue => No Space from FRONT Side";
 			return;
 		}
 	}
@@ -152,18 +164,25 @@ int main()
 	void StudentQueue::deleteFront()
 	{
 		int n;
+		
+		// When Q is EMPTY
 		if(front == -1 && back == -1) 
 		{
 			cout << "Double-Ended Queue is Empty";
 			return;
 		}
 		
+		// When front reached at back position 
 		if(front == back)
 		{
 			front = back = -1;
-		} 
+		}
+		
+		// When front reached at last position 
 		else if(front == 9)
 			front = -1;
+		
+		// Normal Situation
 		else
 			front = front + 1;
 	}
@@ -172,16 +191,21 @@ int main()
 	void StudentQueue::deleteBack()
 	{
 		int n;
+		
+		// When Q is EMPTY
 		if(front == -1 && back == -1) 
 		{
 			cout << "Double-Ended Queue is Empty";
 			return;
 		}
 		
+		// When back reached at front position 
 		if(front == back)
 		{
 			front = back = -1;
 		} 
+		
+		// Normal Situation
 		else
 			back = back - 1;
 	}
