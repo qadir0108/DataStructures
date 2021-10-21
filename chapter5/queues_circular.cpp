@@ -1,8 +1,8 @@
 /*
 	Circular Queues Program
 	Data Structures using C++ - Examples
-	Version:1.0
-	Date:	2020-11-09
+	Version:1.0 	Date:	2020-11-09
+	Version:1.1 	Date:	2021-10-21
 	Author:	Kamran Qadir (kamran.qadir@bzu.edu.pk)
 */
 #include<iostream>
@@ -11,19 +11,19 @@ using namespace std;
 class StudentQueue
 {
 	private:
-		int front, rear;
+		int front, back;
 		int q[5];
 	
 	public:
 		StudentQueue()
 		{
 			front = -1;
-			rear = -1; 
+			back = -1; 
 		}
 		
 		void insertQueue(int n)
 		{
-			if(front == 0 && rear == 4)
+			if(front == 0 && back == 4)
 			{
 				cout << "Circular Queue is Full... Please Wait outside...";
 				return;
@@ -31,18 +31,18 @@ class StudentQueue
 			if(front == -1)
 			{
 				front = 0;
-				rear = 0;
+				back = 0;
 			}
-			else if (rear == 4)
+			else if (back == 4)
 			{
-				rear = 0;
+				back = 0;
 			} 
 			else
 			{
-				rear = rear + 1;
+				back = back + 1;
 			}
 			
-			q[rear] = n;	
+			q[back] = n;	
 				
 			// Open the window
 			if(front == -1) front = 0;
@@ -54,14 +54,14 @@ class StudentQueue
 			if(front == -1) 
 			{
 				cout << "Circular Queue is Empty";
-				return -1;
+				return -9999;
 			}
 			
 			n = q[front];
 			
-			if(front == rear)
+			if(front == back)
 			{
-				front = rear = -1;
+				front = back = -1;
 			} 
 			else if(front == 4)
 				front = 0;
@@ -80,7 +80,7 @@ class StudentQueue
 				return;
 			}
 			
-			for(int i = front; i <= rear; i++)
+			for(int i = front; i <= back; i++)
 			 {
 			 	cout << q[i] << "\t"; 
 			 }
@@ -118,10 +118,13 @@ int main()
 			
 			case 2:
 				value = obj.deleteQueue();
-				cout << value << " is deleted.";
 				
-				cout << "\n******* Circular Queue after DELETE ******* \n";
-				obj.print();
+				if(value != -9999) {
+					cout << value << " is deleted.";
+					
+					cout << "\n******* Circular Queue after DELETE ******* \n";
+					obj.print();
+				}
 				
 				break;
 		}

@@ -1,8 +1,8 @@
 /*
 	Simple Queues Program
 	Data Structures using C++ - Examples
-	Version:1.0
-	Date:	2020-10-20
+	Version:1.0 	Date:	2020-10-20
+	Version:1.1 	Date:	2021-10-21
 	Author:	Kamran Qadir (kamran.qadir@bzu.edu.pk)
 */
 #include<iostream>
