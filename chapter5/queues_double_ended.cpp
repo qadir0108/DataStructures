@@ -102,7 +102,7 @@ int main()
 		// When Q is FULL
 		if(front == 0 && back == 9)
 		{
-			cout << "Double-Ended Queue is Full... Please Wait outside...";
+			cout << "Double-Ended Queue is FULL";
 			return;
 		}
 
@@ -134,7 +134,7 @@ int main()
 		// When Q is FULL
 		if(front == 0 && back == 9)
 		{
-			cout << "Double-Ended Queue is Full... Please Wait outside...";
+			cout << "Double-Ended Queue is FULL";
 			return;
 		}
 		
@@ -163,12 +163,12 @@ int main()
 	// Member function to delete item from front side
 	void StudentQueue::deleteFront()
 	{
-		int n;
+		int n = q[front];
 		
 		// When Q is EMPTY
 		if(front == -1 && back == -1) 
 		{
-			cout << "Double-Ended Queue is Empty";
+			cout << "Double-Ended Queue is EMPTY";
 			return;
 		}
 		
@@ -185,17 +185,19 @@ int main()
 		// Normal Situation
 		else
 			front = front + 1;
+			
+		cout << "DELETED:" << n;
 	}
 	
 	// Member function to delete item from back side
 	void StudentQueue::deleteBack()
 	{
-		int n;
+		int n = q[back];
 		
 		// When Q is EMPTY
 		if(front == -1 && back == -1) 
 		{
-			cout << "Double-Ended Queue is Empty";
+			cout << "Double-Ended Queue is EMPTY";
 			return;
 		}
 		
@@ -208,6 +210,8 @@ int main()
 		// Normal Situation
 		else
 			back = back - 1;
+			
+		cout << "DELETED: " << n;
 	}
 	
 	// Member function to PRINT data from De-Queue
@@ -215,7 +219,7 @@ int main()
 	{
 		if(front == -1) 
 		{
-			cout << "Double-Ended Queue is Empty";
+			cout << "Double-Ended Queue is EMPTY";
 			return;
 		}
 		

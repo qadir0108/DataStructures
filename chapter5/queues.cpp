@@ -25,7 +25,7 @@ class StudentQueue
 		{
 			if(back >= 9)
 			{
-				cout << "Student Queue is Full... Please Wait outside...";
+				cout << "Student Queue is FULL";
 				return;
 			}
 			else
@@ -39,16 +39,14 @@ class StudentQueue
 			
 		}
 		
-		int deleteQueue()
+		void deleteQueue()
 		{
-			int n;
+			int n = q[front];
 			if(front == -1) 
 			{
-				cout << "Student Queue is Empty";
-				return -9999;
+				cout << "Student Queue is EMPTY";
+				return;
 			}
-			
-			n = q[front];
 			
 			if(front == back)
 			{
@@ -59,15 +57,15 @@ class StudentQueue
 				front = front + 1;
 			}
 			
-			return n;
-			
+			cout << "DELETED: " << n;
+
 		}
 		
 		void print()
 		{
 			if(front == -1) 
 			{
-				cout << "Student Queue is Empty";
+				cout << "Student Queue is EMPTY";
 				return;
 			}
 			
@@ -108,14 +106,11 @@ int main()
 				break;
 			
 			case 2:
-				value = obj.deleteQueue();
-				if(value != -9999)
-				{
-					cout << value << " is deleted.";
+				obj.deleteQueue();
 				
-					cout << "\n******* Student Queue after DELETE ******* \n";
-					obj.print();
-				}
+				cout << "\n******* Student Queue after INSERT ******* \n";
+				obj.print();
+				
 				break;
 		}
 	}
