@@ -1,8 +1,8 @@
 /*
 	Linked List
 	Data Structures using C++ - Examples
-	Version:1.0
-	Date:	2020-12-08
+	Date:	2020-12-08			Version:1.0
+	Date:	2022-11-17			Version:2.0
 	Author:	Kamran Qadir (kamran.qadir@bzu.edu.pk)
 */
 #include<iostream>
@@ -31,11 +31,14 @@ class LinkedListAppend
 		// Member function to append
 		void append(int n)
 		{
+			// Create New Node
+			temp = new Node;
+			temp -> data = n;
+			temp -> link = NULL;
+
 			if(start == NULL) 
 			{
-				start = new Node;
-				start -> data = n;
-				start -> link = NULL;
+				start = temp;
 			}
 			else
 			{
@@ -46,10 +49,7 @@ class LinkedListAppend
 					current = current -> link;
 				}
 				
-				temp = new Node;
-				temp -> data = n;
-				temp -> link = NULL;
-				
+				// Append new Node in the last
 				current -> link = temp;	
 			}
 		}
