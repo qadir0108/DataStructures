@@ -33,12 +33,15 @@ class TwoWayLinkedList
 		// Member function to append
 		void append(int n)
 		{
+			// Create New Node
+			temp = new Node;
+			temp -> previous = NULL;
+			temp -> data = n;
+			temp -> next = NULL;
+			
 			if(start == NULL) 
 			{
-				start = new Node;
-				start -> previous = NULL;
-				start -> data = n;
-				start -> next = NULL;
+				start = temp;
 			}
 			else
 			{
@@ -49,13 +52,11 @@ class TwoWayLinkedList
 					current = current -> next;
 				}
 				
-				// Create & add new node at end
-				temp = new Node;
-				temp -> previous = current;
-				temp -> data = n;
-				temp -> next = NULL;
-				
+				// Upate last node next - Append new Node in the last
 				current -> next = temp;	
+				
+				// Update new Node - Link new Node with last node
+				temp -> previous = current;
 			}
 		}
 		
