@@ -23,6 +23,7 @@ class LinkedListDelete
 		Node* start;
 		Node* current;
 		Node* temp;
+		Node* previous;
 	
 	public:
 		
@@ -62,17 +63,17 @@ class LinkedListDelete
 		{
 			// Go to specified node
 			current = start;
-			temp = start;
+			previous = start;
 			while(current -> link != NULL)
 			{
 				if(current -> data == n) 
 				{
 					cout << "\nNumber FOUND & DELETED:" << current -> data;
-					temp -> link = current -> link;
+					previous -> link = current -> link;
 					delete current;
 					break;
 				}
-				temp = current;
+				previous = current;
 				current = current -> link;
 			}
 		}
@@ -91,17 +92,17 @@ class LinkedListDelete
 		{
 			// Traversing / Visitng Linked List
 			current = start;
-			temp = start;
+			previous = start;
 			while(current -> link != NULL)
 			{
-				temp = current;
+				previous = current;
 				current = current -> link;
 			}
 			
 			// current will be last node
 			// temp will be second last node
 			cout << "\nNumber from End DELETED: "<< current -> data;
-			temp -> link = NULL;
+			previous -> link = NULL;
 			delete current;
 		}
 		
