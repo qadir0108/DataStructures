@@ -26,11 +26,11 @@ class SequentialSearch
 		}
 		
 		// Member function to search data from array
-		void max()
+		void search(int max)
 		{
 			int i = 0;
 			int loc = -1;
-			int max;
+			
 			// 4 5 6
 			max = arr[0]; // 4			
 			while(i <= 9) 
