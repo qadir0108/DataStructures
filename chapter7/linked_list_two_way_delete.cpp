@@ -5,7 +5,7 @@
 	3. At Start
 	Data Structures using C++ - Examples
 	Version:1.0
-	Date:	2020-11-24
+	Date:	2022-11-24
 	Author:	Kamran Qadir (kamran.qadir@bzu.edu.pk)
 */
 #include<iostream>
