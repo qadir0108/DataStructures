@@ -56,13 +56,11 @@ class TwoWayLinkedListDelete
 					current = current -> next;
 				}
 				
-				// Create & add new node at end
-				temp = new Node;
-				temp -> previous = current;
-				temp -> data = n;
-				temp -> next = NULL;
-				
+				// Upate last node next part - Append new Node in the last
 				current -> next = temp;	
+				
+				// Update new Node previous part - Link new Node with last node
+				temp -> previous = current;
 			}
 		}
 		
