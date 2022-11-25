@@ -37,12 +37,15 @@ class TwoWayLinkedListDelete
 		
 		void append(int n)
 		{
+			// Create New Node
+			temp = new Node;
+			temp -> previous = NULL;
+			temp -> data = n;
+			temp -> next = NULL;
+			
 			if(start == NULL) 
 			{
-				start = new Node;
-				start -> previous = NULL;
-				start -> data = n;
-				start -> next = NULL;
+				start = temp;
 			}
 			else
 			{
@@ -158,7 +161,7 @@ int main()
 	int value,m;
 	int afterValue;
 	
-	cout << "\nEnter five value : " << endl;
+//	cout << "\nEnter five value : " << endl;
 	for(int i=0;i<=30;i+=5)
 	{
 	//	cin >> value;
