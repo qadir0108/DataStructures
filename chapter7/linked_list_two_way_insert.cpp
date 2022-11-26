@@ -72,6 +72,10 @@ class TwoWayLinkedList
 				if(current -> data == afterValue) 
 				{
 					cout << "\nNumber FOUND:" << current -> data;
+					// move on step forward the current and previous node 
+					// so that node can be created after value
+					prev = current;
+					current = current -> next;
 					// Have to insert new node between prev & current
 					temp = new Node;
 					temp -> data = n;
